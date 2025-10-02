@@ -1,0 +1,57 @@
+<mat-card class="consulta-card">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon [fontIcon]="searchIcon" class="search-title-icon"></mat-icon>
+      Consulta de Créditos Tributários
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="consultaForm" (ngSubmit)="consultarCreditos()">
+      <p class="mat-body-1">Tipo de Consulta</p>
+
+      <mat-radio-group
+        aria-label="Tipo de Consulta"
+        formControlName="searchType"
+        class="radio-group"
+      >
+        <mat-radio-button [value]="SearchType.NFSE" class="radio-button">
+          <mat-icon fontIcon="receipt_long"></mat-icon> Número da NFS-e
+        </mat-radio-button>
+        <mat-radio-button [value]="SearchType.CREDITO" class="radio-button">
+          <mat-icon fontIcon="credit_card"></mat-icon> Número do Crédito
+        </mat-radio-button>
+      </mat-radio-group>
+
+      <mat-form-field appearance="outline" class="full-width-input">
+        <mat-label>{{ inputLabel }}</mat-label>
+        <input
+          matInput
+          formControlName="searchValue"
+          [placeholder]="inputPlaceholder"
+        />
+        <mat-hint>Ex: {{ inputPlaceholder }}</mat-hint>
+        <mat-error
+          *ngIf="
+            consultaForm.get('searchValue')?.hasError('required') &&
+            consultaForm.get('searchValue')?.touched
+          "
+        >
+          O {{ inputLabel }} é obrigatório.
+        </mat-error>
+      </mat-form-field>
+
+      <div class="consultar-button-container">
+        <button
+          mat-flat-button
+          color="primary"
+          type="submit"
+          [disabled]="consultaForm.invalid || isLoading"
+          class="consultar-button"
+        >
+          <mat-icon fontIcon="search"></mat-icon> Consultar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

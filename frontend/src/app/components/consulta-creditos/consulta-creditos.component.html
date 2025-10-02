@@ -1,0 +1,16 @@
+<app-consulta-header></app-consulta-header>
+
+<div class="consulta-container">
+  <app-consulta-form
+    (search)="handleSearch($event)"
+    [isLoading]="isLoading">
+  </app-consulta-form>
+</div>
+
+<div class="result-area-container">
+  <app-consulta-resultado
+    [creditos]="creditos"
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage">
+  </app-consulta-resultado>
+</div>

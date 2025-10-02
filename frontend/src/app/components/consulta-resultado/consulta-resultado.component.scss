@@ -1,0 +1,43 @@
+F.results-table-container {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 24px;
+}
+
+.results-table-container .mat-h2 {
+  text-align: left;
+  margin-left: 16px;
+}
+
+.full-width-table {
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.label-mobile {
+  display: none;
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .results-table-container {
+    padding: 0 8px;
+    max-width: 100%;
+  }
+}
+
+.table-scroll-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.full-width-table {
+  width: 100%;
+  min-width: 600px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.label-mobile {
+  display: none;
+}

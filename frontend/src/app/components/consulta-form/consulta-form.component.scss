@@ -1,0 +1,64 @@
+.consulta-card {
+  width: 100%;
+  //max-width: 600px; /* Largura máxima para o card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.consulta-card mat-card-header {
+  padding-bottom: 16px;
+}
+
+.consulta-card mat-card-title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1565c0;
+}
+
+.search-title-icon {
+  margin-right: 8px;
+  color: #1565c0;
+}
+
+.radio-group {
+  display: flex;
+  gap: 24px;
+  margin: 16px 0;
+}
+
+@media (max-width: 400px) {
+  .radio-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+}
+
+.radio-button mat-icon {
+  margin-right: 4px;
+}
+
+.full-width-input {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.consultar-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.consultar-button {
+  padding: 0 24px;
+  height: 40px;
+}
+
+.consultar-button mat-icon {
+  margin-right: 4px;
+}
