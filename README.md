@@ -14,6 +14,11 @@
 ![docker][DOCKER]
 ![kafka][KAFKA]
 
+<p align="center">
+    <img width="1565" height="845" alt="image" src="https://github.com/user-attachments/assets/f9b69648-28c8-446d-ac7b-b3c549d1fc70" />
+</p>
+
+
 <h2 id="started">📌 Sobre</h2>
 Este projeto demonstra uma arquitetura de microsserviços completa, containerizada com Docker e Docker Compose. A solução é composta por um Frontend em Angular, um Backend em Spring Boot (Java 21), e um sistema de mensageria Apache Kafka/Zookeeper.
 
